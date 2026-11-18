@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yesenia Carmolinga, Real Estate Agent — Concept Preview | Dallas-Fort Worth</title>
+    <meta
+      name="description"
+      content="Unofficial concept preview for Yesenia Carmolinga, real estate agent with Monument Realty in Dallas-Fort Worth. Example listings, layout previews and contact details."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#12120f" />
+    <meta property="og:title" content="Yesenia Carmolinga, Real Estate Agent — Concept Preview" />
+    <meta
+      property="og:description"
+      content="An unofficial design concept preview. Not Yesenia Carmolinga's official website."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./assets/monogram.svg" />
+    <script type="module" crossorigin src="./assets/index-BUYCJcIK.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D-EoCBQs.css">
+    <link rel="stylesheet" href="./override.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script>
+(function () {
+  var NAME = 'Yesenia Carmolinga';
+  var done = false;
+  function addMono() {
+    if (done) return;
+    var about = document.getElementById('about');
+    if (!about) return;
+    var ps = about.querySelectorAll('p');
+    for (var i = 0; i < ps.length; i++) {
+      if (ps[i].textContent.trim() === NAME) {
+        done = true;
+        var fig = document.createElement('figure');
+        fig.style.cssText = 'margin:0 0 1.4rem;display:flex;align-items:center;gap:1rem';
+        fig.innerHTML = '<img src="assets/monogram.svg" alt="Portrait placeholder for ' + NAME + '" width="72" height="72" style="border-radius:50%;display:block">' +
+          '<figcaption style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(201,162,39,0.75);max-width:16rem;line-height:1.5">Portrait placeholder - approved photo to be added</figcaption>';
+        ps[i].parentNode.insertBefore(fig, ps[i]);
+        return;
+      }
+    }
+  }
+  var obs = new MutationObserver(addMono);
+  obs.observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener('DOMContentLoaded', addMono);
+  setTimeout(addMono, 2500);
+})();
+</script>
+
+</body>
+</html>

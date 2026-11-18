@@ -1,0 +1,5 @@
+/* per-lead hero treatment: pan */
+@media (prefers-reduced-motion: no-preference) {
+  img[fetchpriority="high"] { animation: kb-pan 27s ease-in-out infinite alternate; }
+  @keyframes kb-pan { from { transform: scale(1.08) translateX(-1.6%); } to { transform: scale(1.08) translateX(1.6%); } }
+}
