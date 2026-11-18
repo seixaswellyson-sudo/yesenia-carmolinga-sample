@@ -3,3 +3,32 @@
   img[fetchpriority="high"] { animation: kb-pan 27s ease-in-out infinite alternate; }
   @keyframes kb-pan { from { transform: scale(1.08) translateX(-1.6%); } to { transform: scale(1.08) translateX(1.6%); } }
 }
+
+/* fc-contact-button */
+.fc-contact {
+  position: fixed; right: 24px; bottom: 24px; z-index: 95;
+  display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 20px 0 22px;
+  border-radius: 999px; text-decoration: none; font-family: inherit;
+  background: rgba(15, 15, 21, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.85);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.fc-contact .fc-label { font-size: 15px; font-weight: 600; color: #f2f2f0; letter-spacing: 0.01em; white-space: nowrap; }
+.fc-contact .fc-icon { display: grid; place-items: center; color: #fff; }
+.fc-contact .fc-icon svg { width: 26px; height: 26px; display: block; }
+.fc-contact--wa { background: #25D366; border-color: #25D366; backdrop-filter: none; -webkit-backdrop-filter: none; animation: fcWaPulse 2s infinite; }
+.fc-contact--wa .fc-label { color: #04210f; }
+.fc-contact--wa:hover, .fc-contact--wa:focus-visible { background: #2fe173; border-color: #2fe173; animation: none; box-shadow: 0 0 28px 2px rgba(37, 211, 102, 0.55); }
+.fc-contact--dark:hover, .fc-contact--dark:focus-visible { border-color: rgba(255, 255, 255, 0.45); background: rgba(22, 22, 29, 0.97); box-shadow: 0 20px 44px -16px rgba(0, 0, 0, 0.9); }
+@keyframes fcWaPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .fc-contact--wa { animation: none; } }
+@media (max-width: 480px) {
+  .fc-contact { right: 16px; bottom: 16px; height: 52px; padding: 0 16px; }
+  .fc-contact .fc-label { font-size: 14px; }
+}
